@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Manrope:wght@500;700;800&family=Yellowtail&display=swap');
+@import 'tailwindcss';
+
+/* Paleta inspirada no pôr do sol de Vice City / GTA 6 */
+@theme {
+  --color-noite: #0d0618;
+  --color-noite2: #1a0b33;
+  --color-rosa: #ff2e88;
+  --color-magenta: #c724b1;
+  --color-laranja: #ff7a3d;
+  --color-pessego: #ffb36b;
+  --color-ciano: #19d3e6;
+  --color-roxo: #6a2bd9;
+  --font-display: 'Anton', Impact, sans-serif;
+  --font-body: 'Manrope', system-ui, sans-serif;
+  --font-script: 'Yellowtail', cursive;
+  --animate-shine: shine var(--duration) infinite linear;
+  --animate-rainbow: rainbow var(--speed, 2.5s) infinite linear;
+}
+
+@keyframes shine {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 100%; }
+  to { background-position: 0% 0%; }
+}
+@keyframes rainbow {
+  0% { background-position: 0%; }
+  100% { background-position: 200%; }
+}
+
+:root {
+  --color-1: #ff2e88;
+  --color-2: #6a2bd9;
+  --color-3: #ff7a3d;
+  --color-4: #19d3e6;
+  --color-5: #ffb36b;
+  color-scheme: dark;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--color-noite); color: #fff; font-family: var(--font-body); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+
+details summary::-webkit-details-marker { display: none; }
+details summary { list-style: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
